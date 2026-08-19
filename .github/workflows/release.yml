@@ -13,22 +13,29 @@ jobs:
       id-token: write
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
       - uses: pnpm/action-setup@v4
         with:
           version: 11.17.0
+
       - uses: actions/setup-node@v4
         with:
           node-version: 22
           cache: pnpm
           registry-url: https://registry.npmjs.org
+
       - run: pnpm install --frozen-lockfile
       - run: pnpm typecheck
       - run: pnpm test
       - run: pnpm build
+
       - uses: changesets/action@v1
         with:
-          version: pnpm install --no-frozen-lockfile
-          publish: pnpm publish -r
+          # version步骤交给changeset内部处理，不要填install命令
+          publish: pnpm changeset publish
+          createRelease: github
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
