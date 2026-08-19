@@ -1,0 +1,14 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "jsx": "react-jsx",
+    "noEmit": true,
+    "types": ["vite/client"],
+    "paths": {
+      "@chatkit-lab/chatkit-core": ["../../libs/core/src/index.ts"],
+      "@chatkit-lab/chatkit-react": ["../../libs/react/src/index.ts"]
+    }
+  },
+  "include": ["src", "vite.config.ts"]
+}

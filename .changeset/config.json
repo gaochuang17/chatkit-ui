@@ -1,0 +1,13 @@
+{
+  "$schema": "https://unpkg.com/@changesets/config/schema.json",
+  "changelog": "@changesets/cli/changelog",
+  "commit": false,
+  "fixed": [["@chatkit-lab/chatkit-core", "@chatkit-lab/chatkit-react"]],
+  "linked": [],
+  "access": "public",
+  "baseBranch": "main",
+  "updateInternalDependencies": "patch",
+  "___experimentalUnsafeOptions_WORKSPACE_ONLY": {
+    "onlyUpdatePeerDependentsWhenOutOfRange": true
+  }
+}

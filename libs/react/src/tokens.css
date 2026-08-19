@@ -1,0 +1,28 @@
+.chatkit-root {
+  --chatkit-canvas: #ffffff;
+  --chatkit-sidebar-bg: #f8f9fb;
+  --chatkit-surface: #ffffff;
+  --chatkit-hover: #eceef2;
+  --chatkit-border: #dfe3ea;
+  --chatkit-border-subtle: #edf0f5;
+  --chatkit-text: #16191f;
+  --chatkit-text-secondary: #5d6675;
+  --chatkit-text-tertiary: #8d95a3;
+  --chatkit-accent: #10a37f;
+  --chatkit-accent-hover: #0d8c6d;
+  --chatkit-danger: #d93026;
+  --chatkit-code-bg: #f6f8fa;
+  --chatkit-radius-sm: 8px;
+  --chatkit-radius-md: 12px;
+  --chatkit-radius-full: 9999px;
+  --chatkit-content-width: 860px;
+  color: var(--chatkit-text);
+  background: var(--chatkit-canvas);
+  font-family:
+    "Inter",
+    "PingFang SC",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+}

@@ -1,0 +1,217 @@
+html,
+body,
+#root {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background: #eef1f6;
+  color: #17202f;
+  font-family:
+    "Inter",
+    "PingFang SC",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+}
+
+.app {
+  display: flex;
+  width: min(1180px, 100%);
+  height: 100%;
+  margin: 0 auto;
+  flex-direction: column;
+  gap: 14px;
+  padding: 18px;
+}
+
+.authScreen {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: #eef1f6;
+}
+
+.authCard {
+  width: min(380px, 100%);
+  padding: 28px;
+  border: 1px solid #cfd6e2;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 12px 34px rgba(20, 27, 45, 0.08);
+}
+
+.authCard h1 {
+  margin: 0;
+  color: #17202f;
+  font-size: 24px;
+  letter-spacing: 0;
+}
+
+.authIntro {
+  margin: 8px 0 20px;
+  color: #657089;
+  font-size: 14px;
+}
+
+.authStatus {
+  color: #4b556b;
+  font-size: 14px;
+}
+
+.authMode {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-bottom: 18px;
+  border: 1px solid #cfd6e2;
+  border-radius: 7px;
+  overflow: hidden;
+}
+
+.authMode button {
+  height: 36px;
+  border: 0;
+  background: #fff;
+  color: #4b556b;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.authMode button + button {
+  border-left: 1px solid #cfd6e2;
+}
+
+.authMode button.active {
+  background: #17202f;
+  color: #fff;
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.toolbar button {
+  height: 34px;
+  padding: 0 14px;
+  border: 1px solid #cfd6e2;
+  border-radius: 7px;
+  background: #fff;
+  color: #28324a;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.identitySwitch {
+  display: inline-flex;
+  padding: 3px;
+  border: 1px solid #cfd6e2;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.currentUser {
+  min-width: 0;
+  overflow: hidden;
+  color: #4b556b;
+  font-size: 13px;
+  font-weight: 600;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.authForm {
+  display: grid;
+  gap: 14px;
+}
+
+.authForm label {
+  display: grid;
+  gap: 6px;
+  color: #4b556b;
+  font-size: 13px;
+}
+
+.authForm input {
+  height: 38px;
+  padding: 0 11px;
+  border: 1px solid #cfd6e2;
+  border-radius: 7px;
+  color: #17202f;
+  font-size: 14px;
+}
+
+.authForm input:focus {
+  border-color: #10a37f;
+  outline: 2px solid rgba(16, 163, 127, 0.16);
+}
+
+.authForm button[type="submit"] {
+  height: 38px;
+  border: 0;
+  border-radius: 7px;
+  background: #10a37f;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.authForm button[type="submit"]:disabled {
+  background: #8fd6c5;
+  cursor: not-allowed;
+}
+
+.authError {
+  margin: 0;
+  color: #b42318;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.identitySwitch button {
+  border: 0;
+  background: transparent;
+}
+
+.identitySwitch button.active {
+  background: #17202f;
+  color: #fff;
+}
+
+.chatFrame {
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+  border: 1px solid #cfd6e2;
+  border-radius: 9px;
+  background: #fff;
+}
+
+@media (max-width: 720px) {
+  .app {
+    padding: 12px;
+  }
+
+  .toolbar {
+    align-items: stretch;
+  }
+
+  .toolbar button {
+    flex-shrink: 0;
+  }
+}

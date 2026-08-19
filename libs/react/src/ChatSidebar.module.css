@@ -1,0 +1,110 @@
+.sidebar {
+  display: flex;
+  width: 272px;
+  flex-shrink: 0;
+  flex-direction: column;
+  padding: 12px;
+  background: var(--chatkit-sidebar-bg);
+  border-right: 1px solid var(--chatkit-border-subtle);
+}
+
+.newButton {
+  justify-content: center;
+  height: 40px;
+  border-radius: var(--chatkit-radius-sm);
+  font-weight: 500;
+}
+
+.list {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 3px;
+  margin-top: 12px;
+  overflow-y: auto;
+  padding-bottom: 4px;
+}
+
+.item,
+.itemActive {
+  display: flex;
+  width: 100%;
+  min-width: 0;
+  align-items: center;
+  border-radius: var(--chatkit-radius-sm);
+  color: var(--chatkit-text);
+}
+
+.item:hover,
+.itemActive {
+  background: var(--chatkit-hover);
+}
+
+.itemButton {
+  display: flex;
+  min-width: 0;
+  flex: 1;
+  align-items: center;
+  gap: 8px;
+  border: 0;
+  padding: 9px 8px;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.itemIcon {
+  flex-shrink: 0;
+  color: var(--chatkit-text-tertiary);
+  font-size: 15px;
+}
+
+.itemTitle {
+  min-width: 0;
+  flex: 1;
+  overflow: hidden;
+  color: var(--chatkit-text);
+  font-size: 14px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.deleteButton {
+  display: inline-flex;
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: var(--chatkit-radius-sm);
+  background: transparent;
+  color: var(--chatkit-text-tertiary);
+  cursor: pointer;
+}
+
+.deleteButton:hover {
+  background: rgba(217, 48, 38, 0.1);
+  color: var(--chatkit-danger);
+}
+
+.emptyText {
+  margin: 12px 8px;
+  color: var(--chatkit-text-tertiary);
+  font-size: 13px;
+}
+
+@media (max-width: 720px) {
+  .sidebar {
+    width: 100%;
+    max-height: 210px;
+    border-right: 0;
+    border-bottom: 1px solid var(--chatkit-border-subtle);
+  }
+
+  .list {
+    min-height: 84px;
+  }
+}

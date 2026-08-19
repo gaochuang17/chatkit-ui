@@ -1,0 +1,22 @@
+{
+  "name": "chatkit-ui-workspace",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@11.17.0",
+  "scripts": {
+    "build": "pnpm --filter @chatkit-lab/chatkit-core build && pnpm --filter @chatkit-lab/chatkit-react build",
+    "test": "pnpm --filter @chatkit-lab/chatkit-core test && pnpm --filter @chatkit-lab/chatkit-react test",
+    "typecheck": "pnpm -r typecheck",
+    "demo": "pnpm --filter @chatkit-lab/chatkit-demo dev",
+    "changeset": "changeset",
+    "release": "pnpm build && changeset publish",
+    "clean": "pnpm -r clean"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.29.7",
+    "@types/node": "^22.17.0",
+    "prettier": "^3.9.6",
+    "typescript": "^5.6.2"
+  }
+}
