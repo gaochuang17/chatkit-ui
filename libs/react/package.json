@@ -2,6 +2,7 @@
   "name": "@chatkit-lab/chatkit-react",
   "version": "0.1.0",
   "description": "React chat component powered by ChatKit Core",
+  "license": "MIT",
   "type": "module",
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",

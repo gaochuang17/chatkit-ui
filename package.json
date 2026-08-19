@@ -1,6 +1,7 @@
 {
   "name": "chatkit-ui-workspace",
   "version": "0.0.0",
+  "license": "MIT",
   "private": true,
   "type": "module",
   "packageManager": "pnpm@11.17.0",

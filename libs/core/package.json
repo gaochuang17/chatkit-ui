@@ -2,6 +2,7 @@
   "name": "@chatkit-lab/chatkit-core",
   "version": "0.1.0",
   "description": "Framework-agnostic API, SSE, and state controller for ChatKit",
+  "license": "MIT",
   "type": "module",
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
