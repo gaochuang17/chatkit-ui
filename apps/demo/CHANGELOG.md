@@ -1,5 +1,12 @@
 # @chatkit-lab/chatkit-demo
 
+## 0.1.2
+
+### Patch Changes
+
+- Updated dependencies [b65484a]
+  - @chatkit-lab/chatkit-react@0.2.0
+
 ## 0.1.1
 
 ### Patch Changes
