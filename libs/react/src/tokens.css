@@ -1,21 +1,31 @@
 .chatkit-root {
+  /* Token values mirror the cc-chat blue product theme; ChatKitTheme still
+     controls AntD colors while these tokens drive component CSS. */
   --chatkit-canvas: #ffffff;
-  --chatkit-sidebar-bg: #f8f9fb;
+  --chatkit-sidebar-bg: #ffffff;
   --chatkit-surface: #ffffff;
-  --chatkit-hover: #eceef2;
-  --chatkit-border: #dfe3ea;
-  --chatkit-border-subtle: #edf0f5;
-  --chatkit-text: #16191f;
-  --chatkit-text-secondary: #5d6675;
-  --chatkit-text-tertiary: #8d95a3;
-  --chatkit-accent: #10a37f;
-  --chatkit-accent-hover: #0d8c6d;
+  --chatkit-hover: #f3f4f6;
+  --chatkit-hover-light: #f9fafb;
+  --chatkit-border: #e5e7eb;
+  --chatkit-border-subtle: #f0f2f5;
+  --chatkit-text: #1f2937;
+  --chatkit-text-secondary: #6b7280;
+  --chatkit-text-tertiary: #9ca3af;
+  --chatkit-accent: #3b82f6;
+  --chatkit-accent-hover: #2563eb;
+  --chatkit-accent-light: #e8f1fe;
+  --chatkit-accent-ring: rgba(59, 130, 246, 0.12);
   --chatkit-danger: #d93026;
+  --chatkit-bubble-user: #dbeafe;
+  --chatkit-bubble-ai: #f5f7fa;
   --chatkit-code-bg: #f6f8fa;
   --chatkit-radius-sm: 8px;
   --chatkit-radius-md: 12px;
+  --chatkit-radius-lg: 24px;
   --chatkit-radius-full: 9999px;
-  --chatkit-content-width: 860px;
+  --chatkit-content-width: 1000px;
+  --chatkit-sidebar-shadow: 0 0 12px rgba(0, 0, 0, 0.12);
+  --chatkit-shadow-input: 0 1px 2px rgba(16, 24, 40, 0.04);
   color: var(--chatkit-text);
   background: var(--chatkit-canvas);
   font-family:

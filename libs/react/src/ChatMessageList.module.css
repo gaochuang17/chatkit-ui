@@ -37,7 +37,7 @@
 }
 
 .avatarUser {
-  background: #202430;
+  background: var(--chatkit-text);
 }
 
 .avatarAssistant {
@@ -46,7 +46,6 @@
 
 .bubbleUser,
 .bubbleAssistant {
-  max-width: min(75%, 720px);
   padding: 10px 14px;
   font-size: 15px;
   line-height: 1.7;
@@ -54,16 +53,16 @@
 }
 
 .bubbleUser {
-  background: #eef1f6;
+  max-width: min(75%, 720px);
+  background: var(--chatkit-bubble-user);
   border-radius: var(--chatkit-radius-md);
 }
 
 .bubbleAssistant {
-  flex: 1;
   min-width: 0;
-  background: var(--chatkit-canvas);
-  border: 1px solid var(--chatkit-border-subtle);
+  max-width: 88%;
   border-radius: var(--chatkit-radius-md);
+  border-top-left-radius: 4px;
 }
 
 .userText {
@@ -174,7 +173,7 @@
 
 .bubbleAssistant :not(pre) > code {
   padding: 2px 5px;
-  background: #eef1f6;
+  background: var(--chatkit-hover-light);
   border-radius: 4px;
 }
 
@@ -191,7 +190,7 @@
 }
 
 .bubbleAssistant th {
-  background: #f4f6f9;
+  background: var(--chatkit-hover-light);
 }
 
 .bubbleAssistant a {
@@ -211,13 +210,8 @@
   }
 }
 
-@media (max-width: 720px) {
+@media (max-width: 640px) {
   .listInner {
     padding: 16px 14px 6px;
-  }
-
-  .bubbleUser,
-  .bubbleAssistant {
-    max-width: 86%;
   }
 }

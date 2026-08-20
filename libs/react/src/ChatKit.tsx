@@ -129,7 +129,7 @@ export default function ChatKit({
       prefixCls="chatkit-ant"
       theme={{
         token: {
-          colorPrimary: theme?.colorPrimary ?? "#10a37f",
+          colorPrimary: theme?.colorPrimary ?? "#3b82f6",
           borderRadius: theme?.borderRadius ?? 8,
           fontFamily: theme?.fontFamily,
         },

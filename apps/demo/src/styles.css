@@ -14,8 +14,8 @@ body,
 }
 
 body {
-  background: #eef1f6;
-  color: #17202f;
+  background: #ffffff;
+  color: #1f2937;
   font-family:
     "Inter",
     "PingFang SC",
@@ -42,21 +42,21 @@ body {
   align-items: center;
   justify-content: center;
   padding: 24px;
-  background: #eef1f6;
+  background: #f5f8fc;
 }
 
 .authCard {
   width: min(380px, 100%);
-  padding: 28px;
-  border: 1px solid #cfd6e2;
-  border-radius: 8px;
+  padding: 40px 32px 32px;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
   background: #fff;
-  box-shadow: 0 12px 34px rgba(20, 27, 45, 0.08);
+  box-shadow: 0 2px 12px rgba(16, 24, 40, 0.05);
 }
 
 .authCard h1 {
   margin: 0;
-  color: #17202f;
+  color: #1f2937;
   font-size: 24px;
   letter-spacing: 0;
 }
@@ -76,7 +76,7 @@ body {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   margin-bottom: 18px;
-  border: 1px solid #cfd6e2;
+  border: 1px solid #e5e7eb;
   border-radius: 7px;
   overflow: hidden;
 }
@@ -91,12 +91,12 @@ body {
 }
 
 .authMode button + button {
-  border-left: 1px solid #cfd6e2;
+  border-left: 1px solid #e5e7eb;
 }
 
 .authMode button.active {
-  background: #17202f;
-  color: #fff;
+  background: #e8f1fe;
+  color: #3b82f6;
 }
 
 .toolbar {
@@ -109,7 +109,7 @@ body {
 .toolbar button {
   height: 34px;
   padding: 0 14px;
-  border: 1px solid #cfd6e2;
+  border: 1px solid #e5e7eb;
   border-radius: 7px;
   background: #fff;
   color: #28324a;
@@ -120,7 +120,7 @@ body {
 .identitySwitch {
   display: inline-flex;
   padding: 3px;
-  border: 1px solid #cfd6e2;
+  border: 1px solid #e5e7eb;
   border-radius: 8px;
   background: #fff;
 }
@@ -150,29 +150,34 @@ body {
 .authForm input {
   height: 38px;
   padding: 0 11px;
-  border: 1px solid #cfd6e2;
+  border: 1px solid #e5e7eb;
   border-radius: 7px;
   color: #17202f;
   font-size: 14px;
 }
 
 .authForm input:focus {
-  border-color: #10a37f;
-  outline: 2px solid rgba(16, 163, 127, 0.16);
+  border-color: #3b82f6;
+  outline: 2px solid rgba(59, 130, 246, 0.12);
 }
 
 .authForm button[type="submit"] {
   height: 38px;
   border: 0;
   border-radius: 7px;
-  background: #10a37f;
+  background: #3b82f6;
   color: #fff;
   font-size: 14px;
   cursor: pointer;
 }
 
+.authForm button[type="submit"]:hover:not(:disabled) {
+  background: #2563eb;
+}
+
 .authForm button[type="submit"]:disabled {
-  background: #8fd6c5;
+  background: #f9fafb;
+  color: #9ca3af;
   cursor: not-allowed;
 }
 
@@ -197,7 +202,7 @@ body {
   flex: 1;
   min-height: 0;
   overflow: hidden;
-  border: 1px solid #cfd6e2;
+  border: 1px solid #e5e7eb;
   border-radius: 9px;
   background: #fff;
 }

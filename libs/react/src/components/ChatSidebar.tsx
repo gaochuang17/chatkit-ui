@@ -1,8 +1,4 @@
-import {
-  DeleteOutlined,
-  MessageOutlined,
-  PlusOutlined,
-} from "@ant-design/icons";
+import { DeleteOutlined, PlusOutlined } from "@ant-design/icons";
 import { Button } from "antd";
 import type { Conversation } from "@chatkit-lab/chatkit-core";
 import styles from "../ChatSidebar.module.css";
@@ -29,13 +25,15 @@ export default function ChatSidebar({
 }: ChatSidebarProps) {
   return (
     <aside className={styles.sidebar}>
-      <Button
-        className={styles.newButton}
-        icon={<PlusOutlined />}
-        onClick={onNew}
-      >
-        新建对话
-      </Button>
+      <div className={styles.header}>
+        <Button
+          className={styles.newButton}
+          icon={<PlusOutlined />}
+          onClick={onNew}
+        >
+          新对话
+        </Button>
+      </div>
 
       <div className={styles.list} role="list">
         {loading && conversations.length === 0 ? (
@@ -46,6 +44,7 @@ export default function ChatSidebar({
         ) : null}
 
         {conversations.map((conversation) => {
+          // The product list is title-only; deletion is the sole trailing action.
           const isActive = conversation.id === activeConversationId;
           return (
             <div
@@ -58,7 +57,6 @@ export default function ChatSidebar({
                 className={styles.itemButton}
                 onClick={() => void onSelect(conversation.id)}
               >
-                <MessageOutlined className={styles.itemIcon} />
                 <span className={styles.itemTitle}>{conversation.title}</span>
               </button>
               <button
